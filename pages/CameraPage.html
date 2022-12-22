@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+    <!-- Head -->
+    <head>
+        <meta charset = "utf-8">
+        <title> Camera Page</title>
+        <link rel = "stylesheet" href = "css/CameraPageStyle.css"/>
+        <link rel = "stylesheet" href = "css/normalize.css"/>
+        <script type = "text/javascript" src = "Js/CameraPage.js"></script>
+    </head>
+
+    <!-- Body -->
+    <body>
+        <!-- Navigator Bar -->
+        <div class = "navbar">
+            <ul class = "links">
+                <li><a class = "camera" href = "CameraPage.html">Camera</a></li>
+                <li><a href = "sensors.html">Sensors</a></li>
+                <li><a href = "#">PID Controller</a></li>
+            </ul>
+        </div>
+
+        
+        <div class = "main-div">
+            <!-- Camera Div -->
+            <div class = "camera-div">
+                <div class = "main-camera-div">
+                    <img src = "images/img3.jpg">
+                </div>
+                
+                <div class = "fixed-camera-div">  
+                    <div class = "second-camera-div">
+                       <img src = "images/img6.jpg">
+                    </div>
+
+                    <div class = "third-camera-div">
+                        <img src = "images/img5.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control Panel -->
+            <div class = "control-panel-div">
+                
+                <div class = "title-icon">
+                    <img src = "images/icon2.png" alt = "control-icon">
+                    <h2 class = "control-panel-title"> Control Panel </h2>
+                </div>
+                
+                <!-- Speed Control -->
+                <p> Speed Control: </p>
+                <div class = "speed-control-panel">   
+                    <span>Fast speed tuning: </span>                 
+                    <input type = "range" min = "0" max = "100" value = "50" class = "speed-range" id = "speed-slider" oninput = "changeSpeed()" >
+                    <span id = "speed-range-value"> 50 </span>
+                </div>
+                <div class = "manual-speed-tuning">
+                    <span id = "manual-speed-paragraph"> Tuning speed manually: </span>
+                    <input type = "number" min = "0" max = "100"  value = "50" id = "speed-value" oninput="changeSpeedManually()">
+                </div>   
+            </div>
+
+        </div>
+    </body>    
+</html>
