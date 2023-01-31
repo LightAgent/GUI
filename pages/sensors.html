@@ -5,70 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sensors</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
-    <style>
-      nav{
-        background-color: #472183;
-        height: 60px;
-      }
-
-      h1{
-        text-align: center;
-        color: #472183;
-      }
-
-      .figures{
-        display: flex;
-        justify-content: center;
-        position: relative;
-        top: 70px;
-      }
-
-      figure{
-        width: 300px;
-        height: 300px;
-        border: 1px solid #4B56D2;
-      }
-      .readings{
-        display: flex;
-        justify-content: center;
-        position: relative;
-        top: 70px;
-      }
-      .readings p{
-        margin: 30px;
-        margin-left: 200px;
-        margin-right: 200px;
-      }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/sensors.css">
   </head>
-<body>
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#"><img src="#" alt="Image"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sensors</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Settings</a>
-      </li>
-      
-    </ul>
-  </div>
-</nav> -->
-  <nav></nav>
-  <h1>Sensors Reading</h1>
-  <div class="figures">
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="CameraPage.html">Camera Page<span class="sr-only"></span></a>
+                </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="sensors.html">Sensors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bindings.html">Settings</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+    <!-- Heading -->
+    <h1>Sensors Reading</h1> 
+    <!-- Body -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="well">
+            <div class="bg-white rounded-lg p-5 shadow">
+              <h3 class="text-center">Speed Sensor</h3>
+              <div class="graph">
+                <img src="https://blog.hubspot.com/hs-fs/hubfs/Agency_Post/Blog_Images/DataHero_Customers_by_Close_Date.png?width=669&name=DataHero_Customers_by_Close_Date.png" alt="Graph 1" srcset="" width="200" height="200">
+                <p class="text-center">Speed: 20 m/s</p>
+              </div>
+            </div>          
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <div class="bg-white rounded-lg p-5 shadow">
+              <h3 class="text-center">Pressure Sensor</h3>
+              <div class="graph">
+                <img src="https://blog.hubspot.com/hs-fs/hubfs/Agency_Post/Blog_Images/DataHero_Customers_by_Close_Date.png?width=669&name=DataHero_Customers_by_Close_Date.png" alt="Graph 1" srcset="" width="200" height="200">
+                <p class="text-center">Pressure: 50 N/m2</p>
+              </div>
+            </div>  
+          </div>        
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <div class="bg-white rounded-lg p-5 shadow">
+              <h3 class="text-center">Temperature Sensor</h3>
+              <div class="graph">
+                <img src="https://ichef.bbci.co.uk/images/ic/448xn/p09xd6t1.png" alt="Graph 1" srcset="" width="200" height="200">
+                <p class="text-center">Temperature: 30º C</p>
+              </div>
+            </div>  
+          </div>        
+        </div>
+      </div>
+    </div>
+  <!-- <div class="figures">
     <figure class="graph-1">
       <img src="#" alt="fig1">
-  
 
     </figure>
     <figure class="graph-2">
@@ -78,12 +81,12 @@
     <figure class="graph-3">
       <img src="#" alt="fig3">
     </figure>
-  </div>
-  <div class="readings">
+  </div> -->
+  <!-- <div class="readings">
     <p>Sensor 1</p>
     <p>Sensor 2</p>
     <p>Sensor 2</p>
-  </div>
+  </div> -->
   
 
 </body>

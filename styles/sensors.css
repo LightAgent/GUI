@@ -1,0 +1,40 @@
+nav{
+    background-color: #472183;
+    height: 60px;
+  }
+
+h1{
+text-align: center;
+color: #472183;
+}
+
+.figures{
+display: flex;
+justify-content: center;
+position: relative;
+top: 70px;
+}
+
+figure{
+width: 300px;
+height: 300px;
+border: 1px solid #4B56D2;
+}
+.readings{
+display: flex;
+justify-content: center;
+position: relative;
+top: 70px;
+}
+.readings p{
+margin: 30px;
+margin-left: 200px;
+margin-right: 200px;
+}
+.graph{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 50px;
+}

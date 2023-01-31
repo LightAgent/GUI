@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Bindings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        .center {
+            margin: auto;
+            margin-top: 10px;
+            width: 30%;
+            border: 3px solid blue;
+            border-radius: 30px;
+            padding: 10px;
+            text-align: center;
+        }
+        .space{
+            margin: 10px;
+        }
+        .space .rounded{
+            border-radius: 30px;
+        }
+    </style>
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link" href="CameraPage.html">Camera Page<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sensors.html">Sensors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="bindings.html">Settings</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+    <div class="center">
+        <form action="#">
+            <label for="forword" class="space">Upward: </label>
+            <input type="text" id="upward" maxlength="1" class="rounded"><br>
+            <label for="forword" class="space">Downward: </label>
+            <input type="text" id="downward" maxlength="1" class="rounded"><br>
+            <label for="forword" class="space">Forward: </label>
+            <input type="text" id="forward" maxlength="1" class="rounded"><br>
+            <label for="forword" class="space">Backward: </label>
+            <input type="text" id="backward" maxlength="1" class="rounded"><br>
+            <label for="forword" class="space">Right: </label>
+            <input type="text" id="right" maxlength="1" class="rounded"><br>
+            <label for="forword" class="space">Left: </label>
+            <input type="text" id="left" maxlength="1" class="rounded"><br>
+            <label for="forword" class="space">Configuration:</label>
+            <input type="number" class="rounded" min="0" max="10" required value="1" id="config">
+            <button class="rounded" style="margin-left: 5px;" onclick="new Load().loadValues()" type="submit">Load</button><br>
+            <button class="rounded" onclick="new Save().saveValues()" type="submit" style="margin-top: 10px;">Save</button>
+        </form>
+        <!-- <select name="config" id="dropdown">
+            <option value="1">First</option>
+            <option value="2">Second</option>
+            <option value="3">Third</option>
+        </select> -->
+    </div>
+    <script src="../Js/bindings.js"></script>
+</body>
+</html>
