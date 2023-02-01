@@ -52,6 +52,7 @@ function getValues(){
         }
         console.log(request.response);
         const response = JSON.parse(request.response);
+        input.innerHTML = `{"up":"${response["up"]}","down":"${response["down"]}","forward":"${response["forward"]}","backward":"${response["backward"]}","right":"${response["right"]}","left":"${response["left"]}"}`;     
         input.value = `{"up":"${response["up"]}","down":"${response["down"]}","forward":"${response["forward"]}","backward":"${response["backward"]}","right":"${response["right"]}","left":"${response["left"]}"}`;     
     })
 }

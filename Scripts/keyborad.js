@@ -1,38 +1,31 @@
 var response = document.getElementById("input");
-// response = JSON.parse(response.value);
+var stat = document.getElementById("status");
 
 
 
 class keyboard_controller{
-    // constructor(){
-
-    // }
 
     move_forward(){
-        console.log("moving forward");
+        stat.innerHTML = "Status: Moving Forward";
     }
 
     move_backward(){
-        console.log("moving backward");
-
+        stat.innerHTML = "Status: Moving Backward";
     }
 
     move_right(){
-        console.log("moving right");
-
+        stat.innerHTML = "Status: Moving Right";
     }
 
     move_left(){
-        console.log("moving left");
-
+        stat.innerHTML = "Status: Moving Left";
     }
     move_up(){
-        console.log("moving up");
+        stat.innerHTML = "Status: Moving Up";
 
     }
     move_down(){
-        console.log("moving down");
-
+        stat.innerHTML = "Status: Moving Downward";
     }
 
 
@@ -42,11 +35,10 @@ let keyboard = new keyboard_controller();
 document.addEventListener("keydown" , (event) =>{
     // console.log(event.key);
     // console.log(response.value);
-    // var newRes = JSON.parse(response.value);
-    var newRes = JSON.parse(response.value.replaceAll("'",'"'));
+    var newRes = JSON.parse(response.value);
+    // var newRes = JSON.parse(response.value.replaceAll("'",'"'));
     // console.log(newRes["up"]);
     if (event.key == newRes["up"]){
-        console.log("Success");
         keyboard.move_up();
     }
     if (event.key == newRes["down"]){
