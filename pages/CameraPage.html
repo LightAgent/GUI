@@ -78,8 +78,16 @@
                     <span id = "manual-speed-paragraph"> Tuning speed manually: </span>
                     <input type = "number" min = "0" max = "100"  value = "50" id = "speed-value" oninput="changeSpeedManually()">
                 </div>   
+                <div>
+                    <span >Keyboard Configuration: </span>
+                    <input type = "number" min = "0" max = "10"  value = "1" id="config">
+                    <input type="text" id="input" value="">
+                    <button onclick="getValues()">Sigh</button>
+                </div>   
             </div>
-
         </div>
+
+        <script src="../Scripts/keyborad.js"></script>
+        <script src="../Js/bindings.js"></script>
     </body>    
 </html>
