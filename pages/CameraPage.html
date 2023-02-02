@@ -83,7 +83,7 @@
                         <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroup-sizing-sm" style="margin-right:10px; border-radius: 10px;">Keyboard Configuration</span>
                         </div>
-                        <input type = "number" min = "0" max = "10"  value = "1" id="config" style="margin-right:10px; border-radius: 10px;" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        <input type = "number"  min = "1" max = "10"  value = "1" id="config" style="margin-right:10px; border-radius: 10px;" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                         <button onclick="getValues()" class="btn btn-primary" style=" border-radius: 10px;">Load Configuration</button>
                       </div>
                     <!-- <div class="input-group mb-3">
@@ -97,6 +97,8 @@
                 </div>   
             </div>
         </div>
+        <script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+        <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
         <script>
             window.onload = function() {
                 getValues();
