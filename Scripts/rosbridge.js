@@ -108,16 +108,16 @@ thruster7_topic.publish(thruster_msg7);
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 
 // Subscribing to a topic
-let listener = new ROSLIB.Topic({
-    ros : ros,
-    name : '/listener',
-    messageType : 'std_msgs/String'
-});
+// let listener = new ROSLIB.Topic({
+//     ros : ros,
+//     name : '/listener',
+//     messageType : 'std_msgs/String'
+// });
 
-listener.subscribe(function(message) {
-    console.log('Received message on ' + listener.name + ': ' + message.data);
-    listener.unsubscribe();
-});
+// listener.subscribe(function(message) {
+//     console.log('Received message on ' + listener.name + ': ' + message.data);
+//     listener.unsubscribe();
+// });
 
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 

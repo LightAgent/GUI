@@ -111,16 +111,72 @@ let thruster_msg7 = new ROSLIB.Message({
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 
 // Subscribing to a topic
-let listener = new ROSLIB.Topic({
+
+// let listener = new ROSLIB.Topic({
+//     ros : ros,
+//     name : '/listener',
+//     messageType : 'std_msgs/String'
+// });
+
+// listener.subscribe(function(message) {
+//     console.log('Received message on ' + listener.name + ': ' + message.data);
+//     listener.unsubscribe();
+// });
+let camera = new ROSLIB.Topic({
     ros : ros,
-    name : '/listener',
-    messageType : 'std_msgs/String'
+    name : '/rexrov/rexrov/camera/camera_image',
+    messageType : 'sensor_msgs/Image'
 });
 
-listener.subscribe(function(message) {
-    console.log('Received message on ' + listener.name + ': ' + message.data);
-    listener.unsubscribe();
+camera.subscribe(function(message) {
+    console.log('Received message on ' + camera.name + ': ' + message.data);
+    camera.unsubscribe();
 });
+
+let camera_right = new ROSLIB.Topic({
+    ros : ros,
+    name : '/rexrov/rexrov/camera/cameraright',
+    messageType : 'sensor_msgs/Image'
+});
+
+camera_right.subscribe(function(message) {
+    console.log('Received message on ' + camera_right.name + ': ' + message.data);
+    camera_right.unsubscribe();
+});
+
+let camera_left = new ROSLIB.Topic({
+    ros : ros,
+    name : '/rexrov/rexrov/camera/cameraleft',
+    messageType : 'sensor_msgs/Image'
+});
+
+camera_left.subscribe(function(message) {
+    console.log('Received message on ' + camera_left.name + ': ' + message.data);
+    camera_left.unsubscribe();
+});
+
+let imu_sensor = new ROSLIB.Topic({
+    ros : ros,
+    name : '/rexrov/imu',
+    messageType : 'sensor_msgs/Imu'
+});
+
+imu_sensor.subscribe(function(message) {
+    console.log('Received message on ' + imu_sensor.name + ': ' + message.data);
+    imu_sensor.unsubscribe();
+});
+
+let pressure_sensor = new ROSLIB.Topic({
+    ros : ros,
+    name : '/rexrov/pressure',
+    messageType : 'sensor_msgs/FluidPressure'
+});
+
+pressure_sensor.subscribe(function(message) {
+    console.log('Received message on ' + pressure_sensor.name + ': ' + message.data);
+    pressure_sensor.unsubscribe();
+});
+
 
 
 
