@@ -13,14 +13,12 @@
 
     <!-- Body -->
     <body>
-        <!-- Navigator Bar -->
-        <!-- <div class = "navbar">
-            <ul class = "links">
-                <li><a class = "camera" href = "CameraPage.html">Camera</a></li>
-                <li><a href = "sensors.html">Sensors</a></li>
-                <li><a href = "#">PID Controller</a></li>
-            </ul>
-        </div> -->
+        <style>
+            .tableElement{
+                font-weight: bold;
+                color: aliceblue;
+            }
+        </style>
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,7 +81,7 @@
                         <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroup-sizing-sm" style="margin-right:10px; border-radius: 10px;">Keyboard Configuration</span>
                         </div>
-                        <input type = "number"  min = "1" max = "10"  value = "1" id="config" style="margin-right:10px; border-radius: 10px;" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        <input type = "number" onkeydown="return false" min = "1" max = "10"  value = "1" id="config" style="margin-right:10px; border-radius: 10px;" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                         <button onclick="getValues()" class="btn btn-primary" style=" border-radius: 10px;">Load Configuration</button>
                       </div>
                     <!-- <div class="input-group mb-3">
@@ -92,6 +90,40 @@
                     <!-- <input type = "number" min = "0" max = "10"  value = "1" id="config"> -->
                     <!-- <input type="text" id="input" value="" hidden> -->
                     <p id="input" style="margin-right: 5px;"></p>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Direction</th>
+                            <th scope="col">Key</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Upward</th>
+                            <td id="input1" class="tableElement"></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Downward</th>
+                            <td id="input2" class="tableElement"></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Forward</th>
+                            <td id="input3" class="tableElement"></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Backward</th>
+                            <td id="input4" class="tableElement"></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Left</th>
+                            <td id="input5" class="tableElement"></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Right</th>
+                            <td id="input6" class="tableElement"></td>
+                          </tr>
+                        </tbody>
+                      </table>
                     <p id="status">Status:</p>                
                     
                 </div>   
