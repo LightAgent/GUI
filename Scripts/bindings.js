@@ -52,7 +52,12 @@ function getValues(){
         }
         console.log(request.response);
         const response = JSON.parse(request.response);
-        input.innerHTML = `{"up":"${response["up"]}","down":"${response["down"]}","forward":"${response["forward"]}","backward":"${response["backward"]}","right":"${response["right"]}","left":"${response["left"]}"}`;     
+        document.getElementById("input1").innerHTML = response["up"];
+        document.getElementById("input2").innerHTML = response["down"];
+        document.getElementById("input3").innerHTML = response["forward"];
+        document.getElementById("input4").innerHTML = response["backward"];
+        document.getElementById("input5").innerHTML = response["right"];
+        document.getElementById("input6").innerHTML = response["left"];
         input.value = `{"up":"${response["up"]}","down":"${response["down"]}","forward":"${response["forward"]}","backward":"${response["backward"]}","right":"${response["right"]}","left":"${response["left"]}"}`;     
     })
 }
